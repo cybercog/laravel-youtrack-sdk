@@ -78,7 +78,7 @@ $youtrack = app(\Cog\YouTrack\Rest\YouTrackClient::class);
 
 Starting with YouTrack 2017.1 release [authorization based on permanent tokens](https://www.jetbrains.com/help/youtrack/standalone/2017.2/Manage-Permanent-Token.html) is recommended as the main approach for the authorization in your REST API calls.
 
-By default API client will use Permanent Token authentication. But if you want you could redefine it in `.env` file:
+By default API client will use Permanent Token authentication. You could redefine it in `.env` file:
 
 ```
 YOUTRACK_AUTH=cookie

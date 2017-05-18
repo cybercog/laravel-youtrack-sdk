@@ -36,7 +36,6 @@ abstract class TestCase extends Orchestra
         ];
     }
 
-
     /**
      * Force set private property of the object.
      *
