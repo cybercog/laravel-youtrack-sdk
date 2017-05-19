@@ -50,6 +50,7 @@ Laravel wrapper for the [YouTrack REST PHP client library](https://github.com/cy
 - YouTrack >= 2017.1 with REST-API enabled (always enabled, by default)
 - PHP >= 7.1
 - Guzzle HTTP Client >= 6.2
+- Laravel >= 5.1.20
 
 ## Installation
 
