@@ -37,7 +37,7 @@
         "docs": "https://github.com/cybercog/laravel-youtrack-sdk/wiki"
     },
     "require": {
-        "cybercog/youtrack-rest-php": "dev-master",
+        "cybercog/youtrack-rest-php": "^1.0",
         "illuminate/support": "~5.1.20|~5.2.0|~5.3.0|~5.4.0",
         "php": "^7.1"
     },
@@ -57,12 +57,6 @@
         "psr-4": {
             "Cog\\Laravel\\YouTrack\\Tests\\": "tests/"
         }
-    },
-    "conflict": {
-        "illuminate/support": "<5.1"
-    },
-    "suggest": {
-        "illuminate/support": "Required for Laravel integration."
     },
     "scripts": {
         "test": "vendor/bin/phpunit"
