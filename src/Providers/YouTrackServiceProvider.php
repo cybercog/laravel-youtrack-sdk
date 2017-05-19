@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack\Providers;
 
-use Cog\YouTrack\Rest\Authenticator\Contracts\Authenticator as AuthenticatorContract;
+use Cog\YouTrack\Rest\Authorizer\Contracts\Authorizer as AuthorizerContract;
 use Cog\YouTrack\Rest\Client\Contracts\Client as ClientContract;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 use GuzzleHttp\Client as HttpClient;
@@ -53,7 +53,7 @@ class YouTrackServiceProvider extends ServiceProvider
                 'base_uri' => $config->get('youtrack.base_uri'),
             ]);
 
-            return new YouTrackClient($http, $this->resolveAuthenticator($config));
+            return new YouTrackClient($http, $this->resolveAuthorizer($config));
         });
     }
 
@@ -76,14 +76,14 @@ class YouTrackServiceProvider extends ServiceProvider
     }
 
     /**
-     * Resolve Authenticator driver.
+     * Resolve Authorizer driver.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @return \Cog\YouTrack\Rest\Authenticator\Contracts\Authenticator
+     * @return \Cog\YouTrack\Rest\Authorizer\Contracts\Authorizer
      */
-    protected function resolveAuthenticator(ConfigContract $config): AuthenticatorContract
+    protected function resolveAuthorizer(ConfigContract $config): AuthorizerContract
     {
-        $options = $config->get('youtrack.authenticators.' . $config->get('youtrack.authenticator'));
+        $options = $config->get('youtrack.authorizers.' . $config->get('youtrack.authorizer'));
 
         return new $options['driver']($options);
     }

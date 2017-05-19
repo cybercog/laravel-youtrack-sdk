@@ -21,7 +21,7 @@ Laravel wrapper for the [YouTrack REST PHP client library](https://github.com/cy
 - [Installation](#installation)
 - [Configuration](#configuration)
     - [YouTrack URL](#youtrack-url)
-    - [Authentication methods](#authentication-methods)
+    - [Authorization methods](#authorization-methods)
 - [Usage](#usage)
     - [Initialize API client](#initialize-api-client)
     - [API requests](#api-requests)
@@ -38,7 +38,7 @@ Laravel wrapper for the [YouTrack REST PHP client library](https://github.com/cy
 ## Features
 
 - Using contracts to keep high customization capabilities.
-- Multiple authentication strategies: Token, Cookie.
+- Multiple authorization strategies: Token, Cookie.
 - Utilizes PHP Standard Recommendations:
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
   - [PSR-4 (Autoloading Standard)](http://www.php-fig.org/psr/psr-4/).
@@ -89,20 +89,20 @@ YouTrack instance location could be defined in `.env` file:
 YOUTRACK_BASE_URI=https://youtrack.custom.domain
 ```
 
-### Authentication methods
+### Authorization methods
 
 Starting with YouTrack 2017.1 release [authorization based on permanent tokens](https://www.jetbrains.com/help/youtrack/standalone/2017.2/Manage-Permanent-Token.html) is recommended as the main approach for the authorization in your REST API calls.
 
 By default Token authorization will be used. You could redefine it in `.env` file:
 
-#### Token authentication
+#### Token authorization
 
 ```
 YOUTRACK_AUTH=token
 YOUTRACK_TOKEN=your-permanents-token
 ```
 
-#### Cookie authentication
+#### Cookie authorization
 
 ```
 YOUTRACK_AUTH=cookie

@@ -26,36 +26,36 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default YouTrack Authenticator Name
+    | Default YouTrack Authorizer Name
     |--------------------------------------------------------------------------
     |
-    | This option controls the default authenticator that will be used by the
+    | This option controls the default authorizer that will be used by the
     | library when YouTrack authorization is required. You may set this to
-    | any of the drivers defined in the "authenticators" array below.
+    | any of the drivers defined in the "authorizers" array below.
     |
     | Supported: "token" (recommended), "cookie"
     |
     */
 
-    'authenticator' => env('YOUTRACK_AUTH', 'token'),
+    'authorizer' => env('YOUTRACK_AUTH', 'token'),
 
     /*
     |--------------------------------------------------------------------------
-    | YouTrack Authenticators
+    | YouTrack Authorizers
     |--------------------------------------------------------------------------
     |
-    | Here are each of the authenticators available in YouTrack REST API.
+    | Here are each of the authorizers available in YouTrack REST API.
     |
     */
 
-    'authenticators' => [
+    'authorizers' => [
         'token' => [
-            'driver' => \Cog\YouTrack\Rest\Authenticator\TokenAuthenticator::class,
+            'driver' => \Cog\YouTrack\Rest\Authorizer\TokenAuthorizer::class,
             'token' => env('YOUTRACK_TOKEN'),
         ],
 
         'cookie' => [
-            'driver' => \Cog\YouTrack\Rest\Authenticator\CookieAuthenticator::class,
+            'driver' => \Cog\YouTrack\Rest\Authorizer\CookieAuthorizer::class,
             'username' => env('YOUTRACK_USERNAME'),
             'password' => env('YOUTRACK_PASSWORD'),
         ],
