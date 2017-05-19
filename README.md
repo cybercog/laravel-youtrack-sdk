@@ -19,6 +19,9 @@ Laravel wrapper for the [YouTrack REST PHP client library](https://github.com/cy
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Configuration](#configuration)
+    - [YouTrack URL](#youtrack-url)
+    - [Authentication methods](#authentication-methods)
 - [Usage](#usage)
     - [Initialize API client](#initialize-api-client)
     - [API requests](#api-requests)
@@ -68,6 +71,45 @@ Include the service provider within `app/config/app.php`:
 ],
 ```
 
+## Configuration
+
+Laravel YouTrack SDK designed to work with default config, but it always could be modified. First of all publish it:
+
+```bash
+php artisan vendor:publish --provider="Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider" --tag="config"
+```
+
+This will create a `config/youtrack.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
+
+### YouTrack URL
+
+YouTrack instance location could be defined in `.env` file:
+
+```
+YOUTRACK_BASE_URI=https://youtrack.custom.domain
+```
+
+### Authentication methods
+
+Starting with YouTrack 2017.1 release [authorization based on permanent tokens](https://www.jetbrains.com/help/youtrack/standalone/2017.2/Manage-Permanent-Token.html) is recommended as the main approach for the authorization in your REST API calls.
+
+By default Token authorization will be used. You could redefine it in `.env` file:
+
+#### Token authentication
+
+```
+YOUTRACK_AUTH=token
+YOUTRACK_TOKEN=your-permanents-token
+```
+
+#### Cookie authentication
+
+```
+YOUTRACK_AUTH=cookie
+YOUTRACK_USERNAME=username
+YOUTRACK_PASSWORD=secret
+```
+
 ## Usage
 
 ### Initialize API client
@@ -76,16 +118,7 @@ Include the service provider within `app/config/app.php`:
 $youtrack = app(\Cog\YouTrack\Rest\YouTrackClient::class);
 ```
 
-Starting with YouTrack 2017.1 release [authorization based on permanent tokens](https://www.jetbrains.com/help/youtrack/standalone/2017.2/Manage-Permanent-Token.html) is recommended as the main approach for the authorization in your REST API calls.
-
-By default API client will use Permanent Token authentication. You could redefine it in `.env` file:
-
-```
-YOUTRACK_AUTH=cookie
-```
-
 ### API requests
-
 
 #### HTTP GET request
 
