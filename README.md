@@ -225,7 +225,7 @@ Alternatives not found.
 
 ## License
 
-- `YouTrack REST PHP` package is open-sourced software licensed under the [MIT License](LICENSE).
+- `Laravel YouTrack SDK` package is open-sourced software licensed under the [MIT License](LICENSE).
 
 ## About CyberCog
 
