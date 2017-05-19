@@ -39,7 +39,7 @@ Laravel wrapper for the [YouTrack PHP SDK](https://github.com/cybercog/youtrack-
 
 - Using contracts to keep high customization capabilities.
 - Multiple authorization strategies: Token, Cookie.
-- Utilizes PHP Standard Recommendations:
+- Following PHP Standard Recommendations:
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
   - [PSR-4 (Autoloading Standard)](http://www.php-fig.org/psr/psr-4/).
   - [PSR-7 (HTTP Message Interface)](http://www.php-fig.org/psr/psr-7/).
