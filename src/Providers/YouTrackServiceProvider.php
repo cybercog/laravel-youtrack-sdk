@@ -13,9 +13,11 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack\Providers;
 
+use Cog\YouTrack\Rest\Authenticator\CookieAuthenticator;
 use Cog\YouTrack\Rest\Authorizer\Contracts\Authorizer as AuthorizerContract;
 use Cog\YouTrack\Rest\Client\Contracts\Client as ClientContract;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
+use Cog\YouTrack\Rest\HttpClient\GuzzleHttpClient;
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Support\ServiceProvider;
@@ -49,11 +51,11 @@ class YouTrackServiceProvider extends ServiceProvider
         $this->app->bind(ClientContract::class, function () {
             $config = $this->app->make(ConfigContract::class);
 
-            $http = new HttpClient([
+            $httpClient = new GuzzleHttpClient(new HttpClient([
                 'base_uri' => $config->get('youtrack.base_uri'),
-            ]);
+            ]));
 
-            return new YouTrackClient($http, $this->resolveAuthorizer($config));
+            return new YouTrackClient($httpClient, $this->resolveAuthorizer($config));
         });
     }
 
@@ -83,8 +85,15 @@ class YouTrackServiceProvider extends ServiceProvider
      */
     protected function resolveAuthorizer(ConfigContract $config): AuthorizerContract
     {
-        $options = $config->get('youtrack.authorizers.' . $config->get('youtrack.authorizer'));
+        $authorizer = $config->get('youtrack.authorizer');
 
-        return new $options['driver']($options);
+        $options = $config->get('youtrack.authorizers.' . $authorizer);
+        if ($authorizer == 'cookie') {
+            return new $options['driver'](
+                new CookieAuthenticator($options['username'], $options['password'])
+            );
+        }
+
+        return new $options['driver']($options['token']);
     }
 }
