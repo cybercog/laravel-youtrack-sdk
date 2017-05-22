@@ -40,6 +40,7 @@ Laravel wrapper for the [YouTrack PHP SDK](https://github.com/cybercog/youtrack-
 - Using contracts to keep high customization capabilities.
 - Multiple authorization strategies: Token, Cookie.
 - Following PHP Standard Recommendations:
+  - [PSR-1 (Basic Coding Standard)](http://www.php-fig.org/psr/psr-1/).
   - [PSR-2 (Coding Style Guide)](http://www.php-fig.org/psr/psr-2/).
   - [PSR-4 (Autoloading Standard)](http://www.php-fig.org/psr/psr-4/).
   - [PSR-7 (HTTP Message Interface)](http://www.php-fig.org/psr/psr-7/).
@@ -121,6 +122,31 @@ $youtrack = app(\Cog\YouTrack\Rest\YouTrackClient::class);
 
 ### API requests
 
+#### HTTP request
+
+```php
+$method = 'POST'; // GET, POST, PUT, DELETE, PATCH or any custom ones
+$response = $youtrack->request($method, '/issue', [
+    'project' => 'TEST',
+    'summary' => 'New test issue',
+    'description' => 'Test description',
+]);
+```
+
+You can [customize requests created and transferred by a client using request options](http://docs.guzzlephp.org/en/latest/request-options.html). Request options control various aspects of a request including, headers, query string parameters, timeout settings, the body of a request, and much more.
+
+```php
+$options = [
+    'debug' => true,
+    'sink' => '/path/to/dump/file',
+];
+$response = $youtrack->request('POST', '/issue', [
+    'project' => 'TEST',
+    'summary' => 'New test issue',
+    'description' => 'Test description',
+], $options);
+```
+
 #### HTTP GET request
 
 ```php
@@ -142,7 +168,7 @@ $response = $youtrack->post('/issue', [
 ```php
 $response = $youtrack->put('/issue/TEST-1', [
     'summary' => 'Updated summary',
-    'description' => Updated description,
+    'description' => 'Updated description',
 ]);
 ```
 
@@ -158,25 +184,29 @@ Each successful request to the API returns instance of `\Cog\YouTrack\Rest\Respo
 
 #### Get PSR HTTP response
 
-PSR HTTP response could be accessed by calling `getResponse` method on API Response.
+PSR HTTP response could be accessed by calling `httpResponse` method on API Response.
 
 ```php
 $youtrackResponse = $youtrack->get('/issue/TEST-1');
-$psrResponse = $youtrackResponse->getResponse();
+$psrResponse = $youtrackResponse->httpResponse();
 ```
 
 #### Get response Cookie
 
+Returns `Set-Cookie` headers as string from the HTTP response.
+
 ```php
 $apiResponse = $youtrack->get('/issue/TEST-1');
-$cookieString = $apiResponse->getCookie();
+$cookieString = $apiResponse->cookie();
 ```
 
 #### Get response Location
 
+Returns `Location` header from the HTTP response.
+
 ```php
 $apiResponse = $youtrack->get('/issue/TEST-1');
-$location = $apiResponse->getLocation();
+$location = $apiResponse->location();
 ```
 
 #### Transform response to array
@@ -190,7 +220,7 @@ $location = $apiResponse->toArray();
 
 ```php
 $apiResponse = $youtrack->get('/issue/TEST-1');
-$location = $apiResponse->getStatusCode();
+$location = $apiResponse->statusCode();
 ```
 
 ## Change log
