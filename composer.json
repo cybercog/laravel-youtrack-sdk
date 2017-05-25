@@ -43,9 +43,6 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^1.11",
-        "mockery/mockery": "^0.9.8",
-        "orchestra/database": "~3.4.0",
-        "orchestra/testbench": "~3.4.0",
         "phpunit/phpunit": "^5.7"
     },
     "autoload": {
@@ -59,7 +56,18 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit"
+        "test-install": [
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.1",
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.2",
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.3",
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.4"
+        ],
+        "test": [
+            "./vendor/bin/phpunit --configuration tests/framework/5.1",
+            "./vendor/bin/phpunit --configuration tests/framework/5.2",
+            "./vendor/bin/phpunit --configuration tests/framework/5.3",
+            "./vendor/bin/phpunit --configuration tests/framework/5.4"
+        ]
     },
     "config": {
         "sort-packages": true
