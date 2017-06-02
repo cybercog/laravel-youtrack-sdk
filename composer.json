@@ -72,6 +72,13 @@
     "config": {
         "sort-packages": true
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cog\\Laravel\\YouTrack\\Providers\\YouTrackServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable" : true
 }
