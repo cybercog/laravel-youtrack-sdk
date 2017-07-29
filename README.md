@@ -65,7 +65,7 @@ Once composer is installed, execute the following command in your project root t
 $ composer require cybercog/laravel-youtrack-sdk
 ```
 
-Include the service provider within `app/config/app.php`:
+If you are using Laravel 5.4 or lower - include the service provider within `app/config/app.php`:
 
 ```php
 'providers' => [
