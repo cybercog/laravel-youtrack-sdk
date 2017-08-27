@@ -180,7 +180,7 @@ $response = $youtrack->delete('/issue/TEST-1');
 
 ### API responses
 
-Each successful request to the API returns instance of `\Cog\YouTrack\Rest\Response\Contracts\Response` contract. By default it's `\Cog\YouTrack\Rest\Response\YouTrackResponse` class.
+Each successful request to the API returns instance of `\Cog\Contracts\YouTrack\Rest\Response\Response` contract. By default it's `\Cog\YouTrack\Rest\Response\YouTrackResponse` class.
 
 #### Get PSR HTTP response
 
