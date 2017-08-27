@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack\Tests\Unit\Providers;
 
-use Cog\YouTrack\Rest\Client\Contracts\Client as ClientContract;
+use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
 use Cog\Laravel\YouTrack\Tests\TestCase;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 
