@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack\Providers;
 
+use Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer as AuthorizerContract;
+use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
 use Cog\YouTrack\Rest\Authenticator\CookieAuthenticator;
-use Cog\YouTrack\Rest\Authorizer\Contracts\Authorizer as AuthorizerContract;
-use Cog\YouTrack\Rest\Client\Contracts\Client as ClientContract;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 use Cog\YouTrack\Rest\HttpClient\GuzzleHttpClient;
 use GuzzleHttp\Client as HttpClient;
