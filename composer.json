@@ -32,14 +32,14 @@
     "support": {
         "email": "open@cybercog.su",
         "issues": "https://github.com/cybercog/laravel-youtrack-sdk/issues",
-        "wiki": "https://github.com/cybercog/laravel-youtrack-sdk/wiki",
+        "wiki": "https://github.com/cybercog/youtrack-php-sdk/wiki",
         "source": "https://github.com/cybercog/laravel-youtrack-sdk",
-        "docs": "https://github.com/cybercog/laravel-youtrack-sdk/wiki"
+        "docs": "https://github.com/cybercog/youtrack-php-sdk/wiki"
     },
     "require": {
-        "cybercog/youtrack-php-sdk": "^1.0",
-        "illuminate/support": "~5.1.20|~5.2.0|~5.3.0|~5.4.0",
-        "php": "^7.1"
+        "php": "^7.1",
+        "cybercog/youtrack-php-sdk": "^2.0",
+        "illuminate/support": "~5.1.20|~5.2|~5.3|~5.4|~5.5"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^1.11",
