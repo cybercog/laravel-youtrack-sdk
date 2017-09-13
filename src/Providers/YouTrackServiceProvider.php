@@ -81,7 +81,7 @@ class YouTrackServiceProvider extends ServiceProvider
      * Resolve Authorizer driver.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @return \Cog\YouTrack\Rest\Authorizer\Contracts\Authorizer
+     * @return \Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer
      */
     protected function resolveAuthorizer(ConfigContract $config): AuthorizerContract
     {

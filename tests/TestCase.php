@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack\Tests;
 
+use Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use ReflectionClass;
 
 /**
  * Class TestCase.
@@ -32,23 +32,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            \Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider::class,
+            YouTrackServiceProvider::class,
         ];
-    }
-
-    /**
-     * Force set private property of the object.
-     *
-     * @param object $class
-     * @param string $property
-     * @param mixed $value
-     * @return void
-     */
-    protected function setPrivateProperty($class, string $property, $value)
-    {
-        $reflector = new ReflectionClass($class);
-        $property = $reflector->getProperty($property);
-        $property->setAccessible(true);
-        $property->setValue($class, $value);
     }
 }
