@@ -38,7 +38,7 @@
     },
     "require": {
         "php": "^7.1",
-        "cybercog/youtrack-php-sdk": "^2.0",
+        "cybercog/youtrack-php-sdk": "^3.0",
         "illuminate/support": "~5.1.20|~5.2|~5.3|~5.4|~5.5"
     },
     "require-dev": {
