@@ -2,6 +2,12 @@
 
 All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 
+## 4.0.0 - 2017-11-20
+
+### Changed
+
+- Updated YouTrack PHP SDK major version to 4.0.0
+
 ## 3.0.0 - 2017-09-13
 
 ### Changed

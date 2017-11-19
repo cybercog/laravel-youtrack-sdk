@@ -38,7 +38,7 @@
     },
     "require": {
         "php": "^7.1",
-        "cybercog/youtrack-php-sdk": "^3.0",
+        "cybercog/youtrack-php-sdk": "^4.0",
         "illuminate/support": "~5.1.20|~5.2|~5.3|~5.4|~5.5"
     },
     "require-dev": {
@@ -60,13 +60,15 @@
             "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.1",
             "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.2",
             "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.3",
-            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.4"
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.4",
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.5"
         ],
         "test": [
             "./vendor/bin/phpunit --configuration tests/framework/5.1",
             "./vendor/bin/phpunit --configuration tests/framework/5.2",
             "./vendor/bin/phpunit --configuration tests/framework/5.3",
-            "./vendor/bin/phpunit --configuration tests/framework/5.4"
+            "./vendor/bin/phpunit --configuration tests/framework/5.4",
+            "./vendor/bin/phpunit --configuration tests/framework/5.5"
         ]
     },
     "config": {
