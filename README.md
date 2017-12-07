@@ -117,8 +117,10 @@ YOUTRACK_PASSWORD=secret
 ### Initialize API client
 
 ```php
-$youtrack = app(\Cog\YouTrack\Rest\YouTrackClient::class);
+$youtrack = app(\Cog\Contracts\YouTrack\Rest\Client\Client::class);
 ```
+
+As result instantiated `\Cog\YouTrack\Rest\Client\YouTrackClient` class should be returned.
 
 ### API requests
 
