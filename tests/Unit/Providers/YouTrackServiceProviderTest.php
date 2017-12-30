@@ -11,16 +11,16 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Cog\Laravel\YouTrack\Tests\Unit\Providers;
+namespace Cog\Tests\Laravel\YouTrack\Unit\Providers;
 
 use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
-use Cog\Laravel\YouTrack\Tests\TestCase;
+use Cog\Tests\Laravel\YouTrack\TestCase;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 
 /**
  * Class YouTrackServiceProviderTest.
  *
- * @package Cog\Laravel\YouTrack\Tests\Unit\Providers
+ * @package Cog\Tests\Laravel\YouTrack\Unit\Providers
  */
 class YouTrackServiceProviderTest extends TestCase
 {

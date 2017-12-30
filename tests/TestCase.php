@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Cog\Laravel\YouTrack\Tests;
+namespace Cog\Tests\Laravel\YouTrack;
 
 use Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
@@ -19,7 +19,7 @@ use Orchestra\Testbench\TestCase as Orchestra;
 /**
  * Class TestCase.
  *
- * @package Cog\Laravel\YouTrack\Rest\Tests
+ * @package Cog\Tests\Laravel\YouTrack
  */
 abstract class TestCase extends Orchestra
 {

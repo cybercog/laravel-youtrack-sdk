@@ -12,7 +12,7 @@
 
 ## Introduction
 
-Laravel wrapper for the [YouTrack PHP SDK](https://github.com/cybercog/youtrack-php-sdk#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
+Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-php-sdk#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
 
 ## Contents
 

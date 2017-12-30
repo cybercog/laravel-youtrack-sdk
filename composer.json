@@ -1,6 +1,6 @@
 {
     "name": "cybercog/laravel-youtrack-sdk",
-    "description": "Laravel wrapper for YouTrack SDK.",
+    "description": "Laravel wrapper for PHP YouTrack SDK.",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -52,7 +52,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cog\\Laravel\\YouTrack\\Tests\\": "tests/"
+            "Cog\\Tests\\Laravel\\YouTrack\\": "tests/"
         }
     },
     "scripts": {
