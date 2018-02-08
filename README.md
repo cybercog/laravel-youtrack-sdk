@@ -26,7 +26,7 @@ Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-
     - [Initialize API client](#initialize-api-client)
     - [API requests](#api-requests)
     - [API responses](#api-responses)
-- [Change log](#change-log)
+- [Changelog](#changelog)
 - [Contributing](#contributing)
 - [Testing](#testing)
 - [Security](#security)
@@ -225,7 +225,7 @@ $apiResponse = $youtrack->get('/issue/TEST-1');
 $location = $apiResponse->statusCode();
 ```
 
-## Change log
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
