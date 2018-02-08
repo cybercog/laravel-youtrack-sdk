@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 
+## 4.1.0 - 2018-02-08
+
+### Added
+
+- Laravel 5.6 support
+
+### Removed
+
+- Laravel 5.1 support
+- Laravel 5.2 support
+- Laravel 5.3 support
+
 ## 4.0.0 - 2017-11-20
 
 ### Changed
@@ -22,4 +34,4 @@ All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 
 ## 1.0.0 - 2017-05-22
 
-- Initial release.
+- Initial release
