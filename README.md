@@ -260,7 +260,7 @@ Alternatives not found.
 
 ## License
 
-- `Laravel YouTrack SDK` package is open-sourced software licensed under the [MIT License](LICENSE).
+- `Laravel YouTrack SDK` package is open-sourced software licensed under the [MIT License](LICENSE) by Anton Komarev.
 
 ## About CyberCog
 
