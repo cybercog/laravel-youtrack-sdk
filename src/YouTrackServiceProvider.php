@@ -54,7 +54,7 @@ final class YouTrackServiceProvider extends ServiceProvider
         $source = realpath(__DIR__ . '/../config/youtrack.php');
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('youtrack.php')], 'config');
+            $this->publishes([$source => config_path('youtrack.php')], 'youtrack-config');
         } elseif ($this->app instanceof LumenApplication) {
             $this->app->configure('youtrack');
         }
