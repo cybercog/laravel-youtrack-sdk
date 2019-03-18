@@ -8,6 +8,10 @@ All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 
 - Laravel 5.8 support
 
+### Removed
+
+- Laravel 5.4, 5.5, 5.6, 5.7 support
+
 ### Changed
 
 - Make all classes final
