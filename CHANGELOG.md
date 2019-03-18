@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 
+## 5.0.0 - 2019-03-18
+
+### Added
+
+- Laravel 5.8 support
+
+### Changed
+
+- Make all classes final
+- Moved service provider from `Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider` to `Cog\Laravel\YouTrack\YouTrackServiceProvider`
+
 ## 4.2.0 - 2018-09-09
 
 ### Added

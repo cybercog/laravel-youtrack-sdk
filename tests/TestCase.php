@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel YouTrack SDK.
  *
@@ -11,16 +9,13 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Cog\Tests\Laravel\YouTrack;
 
-use Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider;
+use Cog\Laravel\YouTrack\YouTrackServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
-/**
- * Class TestCase.
- *
- * @package Cog\Tests\Laravel\YouTrack
- */
 abstract class TestCase extends Orchestra
 {
     /**
@@ -29,7 +24,7 @@ abstract class TestCase extends Orchestra
      * @param \Illuminate\Foundation\Application $app
      * @return array
      */
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             YouTrackServiceProvider::class,
