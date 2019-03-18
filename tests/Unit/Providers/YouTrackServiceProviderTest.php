@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel YouTrack SDK.
  *
@@ -11,18 +9,15 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace Cog\Tests\Laravel\YouTrack\Unit\Providers;
 
 use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
 use Cog\Tests\Laravel\YouTrack\TestCase;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 
-/**
- * Class YouTrackServiceProviderTest.
- *
- * @package Cog\Tests\Laravel\YouTrack\Unit\Providers
- */
-class YouTrackServiceProviderTest extends TestCase
+final class YouTrackServiceProviderTest extends TestCase
 {
     /** @test */
     public function it_can_instantiate_youtrack_client_from_container()

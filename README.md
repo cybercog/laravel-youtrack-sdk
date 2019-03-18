@@ -65,20 +65,12 @@ Once composer is installed, execute the following command in your project root t
 $ composer require cybercog/laravel-youtrack-sdk
 ```
 
-If you are using Laravel 5.4 or lower - include the service provider within `app/config/app.php`:
-
-```php
-'providers' => [
-    Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider::class,
-],
-```
-
 ## Configuration
 
 Laravel YouTrack SDK designed to work with default config, but it always could be modified. First of all publish it:
 
 ```bash
-php artisan vendor:publish --provider="Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider" --tag="config"
+php artisan vendor:publish --tag="youtrack-config"
 ```
 
 This will create a `config/youtrack.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.

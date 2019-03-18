@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel YouTrack SDK.
  *
@@ -11,7 +9,9 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Cog\Laravel\YouTrack\Providers;
+declare(strict_types=1);
+
+namespace Cog\Laravel\YouTrack;
 
 use Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer as AuthorizerContract;
 use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
@@ -24,29 +24,19 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Laravel\Lumen\Application as LumenApplication;
 
-/**
- * Class YouTrackServiceProvider.
- *
- * @package Cog\Laravel\YouTrack\Providers
- */
-class YouTrackServiceProvider extends ServiceProvider
+final class YouTrackServiceProvider extends ServiceProvider
 {
-    /**
-     * Perform post-registration booting of services.
-     *
-     * @return void
-     */
+    public function register(): void
+    {
+        $this->registerBindings();
+    }
+
     public function boot(): void
     {
         $this->bootConfig();
     }
 
-    /**
-     * Register bindings in the container.
-     *
-     * @return void
-     */
-    public function register(): void
+    private function registerBindings(): void
     {
         $this->app->bind(ClientContract::class, function () {
             $config = $this->app->make(ConfigContract::class);
@@ -55,21 +45,16 @@ class YouTrackServiceProvider extends ServiceProvider
                 'base_uri' => $config->get('youtrack.base_uri'),
             ]));
 
-            return new YouTrackClient($httpClient, $this->resolveAuthorizer($config));
+            return new YouTrackClient($httpClient, $this->resolveAuthorizerDriver($config));
         });
     }
 
-    /**
-     * Boot Laravel or Lumen config.
-     *
-     * @return void
-     */
-    protected function bootConfig(): void
+    private function bootConfig(): void
     {
-        $source = realpath(__DIR__ . '/../../config/youtrack.php');
+        $source = realpath(__DIR__ . '/../config/youtrack.php');
 
         if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
-            $this->publishes([$source => config_path('youtrack.php')], 'config');
+            $this->publishes([$source => config_path('youtrack.php')], 'youtrack-config');
         } elseif ($this->app instanceof LumenApplication) {
             $this->app->configure('youtrack');
         }
@@ -77,13 +62,7 @@ class YouTrackServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($source, 'youtrack');
     }
 
-    /**
-     * Resolve Authorizer driver.
-     *
-     * @param \Illuminate\Contracts\Config\Repository $config
-     * @return \Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer
-     */
-    protected function resolveAuthorizer(ConfigContract $config): AuthorizerContract
+    private function resolveAuthorizerDriver(ConfigContract $config): AuthorizerContract
     {
         $authorizer = $config->get('youtrack.authorizer');
 
