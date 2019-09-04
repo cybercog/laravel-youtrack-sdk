@@ -1,8 +1,0 @@
-{
-    "require": {
-        "illuminate/support": "5.8.*"
-    },
-    "require-dev": {
-        "orchestra/testbench": "3.8.*"
-    }
-}

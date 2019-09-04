@@ -12,14 +12,9 @@
 >
     <testsuites>
         <testsuite name="Package">
-            <directory suffix="Test.php">../../Unit/</directory>
+            <directory suffix=".php">tests/</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist>
-            <directory suffix=".php">./src/</directory>
-        </whitelist>
-    </filter>
     <php>
         <env name="YOUTRACK_BASE_URI" value="https://youtrack.example.com"/>
         <env name="YOUTRACK_AUTH" value="token"/>

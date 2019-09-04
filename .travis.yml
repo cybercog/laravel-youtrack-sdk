@@ -20,9 +20,6 @@ before_script:
   - if [[ $setup = 'basic' ]]; then travis_retry composer install --prefer-dist --no-interaction; fi
   - if [[ $setup = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable; fi
   - if [[ $setup = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable; fi
-  # Installing `Laravel-YouTrack-SDK` package dependencies for each
-  # supported Laravel versions (see composer.json, under scripts section).
-  - composer test-install
 
 script:
-  - composer test
+  - ./vendor/bin/phpunit -c phpunit.xml.dist --verbose

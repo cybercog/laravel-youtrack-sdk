@@ -20,7 +20,7 @@ use Cog\YouTrack\Rest\Client\YouTrackClient;
 final class YouTrackServiceProviderTest extends TestCase
 {
     /** @test */
-    public function it_can_instantiate_youtrack_client_from_container()
+    public function it_can_instantiate_youtrack_client_from_container(): void
     {
         $client = $this->app->make(ClientContract::class);
 
