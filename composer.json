@@ -39,7 +39,7 @@
     "require": {
         "php": "^7.1",
         "cybercog/youtrack-php-sdk": "^4.0",
-        "illuminate/support": "5.8.*"
+        "illuminate/support": "5.8.*|^6.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.10",
@@ -57,10 +57,12 @@
     },
     "scripts": {
         "test-install": [
-            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.8"
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/5.8",
+            "composer install --prefer-dist --no-interaction --working-dir tests/framework/6.x"
         ],
         "test": [
-            "./vendor/bin/phpunit --configuration tests/framework/5.8"
+            "./vendor/bin/phpunit --configuration tests/framework/5.8",
+            "./vendor/bin/phpunit --configuration tests/framework/6.x"
         ]
     },
     "config": {
