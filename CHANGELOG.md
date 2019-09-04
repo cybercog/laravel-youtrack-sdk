@@ -1,8 +1,10 @@
 # Changelog
 
-All notable changes to `laravel-youtrack-sdk` will be documented in this file.
+All notable changes to `cybercog/laravel-youtrack-sdk` will be documented in this file.
 
-## 5.0.0 - 2019-03-18
+## [Unreleased]
+
+## [5.0.0] - 2019-03-18
 
 ### Added
 
@@ -17,13 +19,13 @@ All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 - Make all classes final
 - Moved service provider from `Cog\Laravel\YouTrack\Providers\YouTrackServiceProvider` to `Cog\Laravel\YouTrack\YouTrackServiceProvider`
 
-## 4.2.0 - 2018-09-09
+## [4.2.0] - 2018-09-09
 
 ### Added
 
 - Laravel 5.7 support
 
-## 4.1.0 - 2018-02-08
+## [4.1.0] - 2018-02-08
 
 ### Added
 
@@ -35,19 +37,19 @@ All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 - Laravel 5.2 support
 - Laravel 5.3 support
 
-## 4.0.0 - 2017-11-20
+## [4.0.0] - 2017-11-20
 
 ### Changed
 
 - Updated PHP YouTrack SDK major version to 4.0.0
 
-## 3.0.0 - 2017-09-13
+## [3.0.0] - 2017-09-13
 
 ### Changed
 
 - Updated PHP YouTrack SDK major version to 3.0.0
 
-## 2.0.0 - 2017-08-27
+## [2.0.0] - 2017-08-27
 
 ### Changed
 
@@ -56,3 +58,11 @@ All notable changes to `laravel-youtrack-sdk` will be documented in this file.
 ## 1.0.0 - 2017-05-22
 
 - Initial release
+
+[Unreleased]: https://github.com/cybercog/laravel-youtrack-sdk/compare/5.0.0...master
+[5.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/4.2.0...5.0.0
+[4.2.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/4.1.0...4.2.0
+[4.1.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/4.0.0...4.1.0
+[4.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/3.0.0...4.0.0
+[3.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/2.0.0...3.0.0
+[2.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/1.0.0...2.0.0
