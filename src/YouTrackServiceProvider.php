@@ -20,8 +20,8 @@ use Cog\YouTrack\Rest\Client\YouTrackClient;
 use Cog\YouTrack\Rest\HttpClient\GuzzleHttpClient;
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
+use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
 
 final class YouTrackServiceProvider extends ServiceProvider
