@@ -67,7 +67,7 @@ final class YouTrackServiceProvider extends ServiceProvider
         $authorizer = $config->get('youtrack.authorizer');
 
         $options = $config->get('youtrack.authorizers.' . $authorizer);
-        if ($authorizer == 'cookie') {
+        if ($authorizer === 'cookie') {
             return new $options['driver'](
                 new CookieAuthenticator($options['username'], $options['password'])
             );
