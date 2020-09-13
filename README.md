@@ -61,15 +61,15 @@ composer installed.
 
 Once composer is installed, execute the following command in your project root to install this library:
 
-```sh
-$ composer require cybercog/laravel-youtrack-sdk
+```shell script
+composer require cybercog/laravel-youtrack-sdk
 ```
 
 ## Configuration
 
 Laravel YouTrack SDK designed to work with default config, but it always could be modified. First of all publish it:
 
-```bash
+```shell script
 php artisan vendor:publish --tag="youtrack-config"
 ```
 
@@ -79,7 +79,7 @@ This will create a `config/youtrack.php` file in your app that you can modify to
 
 YouTrack instance location could be defined in `.env` file:
 
-```
+```dotenv
 YOUTRACK_BASE_URI=https://youtrack.custom.domain
 ```
 
@@ -91,14 +91,14 @@ By default Token authorization will be used. You could redefine it in `.env` fil
 
 #### Token authorization
 
-```
+```dotenv
 YOUTRACK_AUTH=token
 YOUTRACK_TOKEN=your-permanents-token
 ```
 
 #### Cookie authorization
 
-```
+```dotenv
 YOUTRACK_AUTH=cookie
 YOUTRACK_USERNAME=username
 YOUTRACK_PASSWORD=secret
@@ -229,8 +229,8 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Run the tests with:
 
-```sh
-$ composer test
+```shell script
+vendor/bin/phpunit
 ```
 
 ## Security
@@ -239,8 +239,8 @@ If you discover any security related issues, please email open@cybercog.su inste
 
 ## Contributors
 
-| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> |
-| :---: |
+| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/sergiy-petrov">sergiy-petrov</a> |
+| :---: | :---: |
 
 [Laravel YouTrack SDK contributors list](../../contributors)
 
