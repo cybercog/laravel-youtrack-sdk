@@ -230,7 +230,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 Run the tests with:
 
 ```shell script
-$ composer test
+vendor/bin/phpunit
 ```
 
 ## Security
