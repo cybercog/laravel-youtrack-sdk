@@ -8,7 +8,7 @@ All notable changes to `cybercog/laravel-youtrack-sdk` will be documented in thi
 
 ### Added
 
-- Laravel 8 support
+- ([#13]) Laravel 8 support
 
 ## [5.2.0] - 2020-03-07
 
@@ -88,5 +88,6 @@ All notable changes to `cybercog/laravel-youtrack-sdk` will be documented in thi
 [3.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/2.0.0...3.0.0
 [2.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/1.0.0...2.0.0
 
+[#13]: https://github.com/cybercog/laravel-youtrack-sdk/pull/13
 [#12]: https://github.com/cybercog/laravel-youtrack-sdk/pull/12
 [#9]: https://github.com/cybercog/laravel-youtrack-sdk/pull/9
