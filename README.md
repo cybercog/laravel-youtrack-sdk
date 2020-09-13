@@ -239,7 +239,7 @@ If you discover any security related issues, please email open@cybercog.su inste
 
 ## Contributors
 
-| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/sergiy-petrov">![@sergiy-petrov](https://avatars.githubusercontent.com/u/8986207?s=110)<br />sergiy-petrov</a> |
+| <a href="https://github.com/antonkomarev">![@antonkomarev](https://avatars.githubusercontent.com/u/1849174?s=110)<br />Anton Komarev</a> | <a href="https://github.com/sergiy-petrov">sergiy-petrov</a> |
 | :---: | :---: |
 
 [Laravel YouTrack SDK contributors list](../../contributors)
