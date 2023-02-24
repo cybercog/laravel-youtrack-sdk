@@ -61,7 +61,7 @@ composer installed.
 
 Once composer is installed, execute the following command in your project root to install this library:
 
-```shell script
+```shell
 composer require cybercog/laravel-youtrack-sdk
 ```
 
@@ -69,7 +69,7 @@ composer require cybercog/laravel-youtrack-sdk
 
 Laravel YouTrack SDK designed to work with default config, but it always could be modified. First of all publish it:
 
-```shell script
+```shell
 php artisan vendor:publish --tag="youtrack-config"
 ```
 
@@ -229,7 +229,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Run the tests with:
 
-```shell script
+```shell
 vendor/bin/phpunit
 ```
 
