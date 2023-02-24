@@ -4,6 +4,18 @@ All notable changes to `cybercog/laravel-youtrack-sdk` will be documented in thi
 
 ## [Unreleased]
 
+### Added
+
+- ([#15]) Laravel 9 support
+- ([#15]) Laravel 10 support
+
+### Removed
+
+- ([#15]) Laravel 8 support
+- ([#15]) Laravel 7 support
+- ([#15]) Laravel 6 support
+- ([#15]) Laravel 5.x support
+
 ## [5.3.0] - 2020-09-13
 
 ### Added
@@ -88,6 +100,7 @@ All notable changes to `cybercog/laravel-youtrack-sdk` will be documented in thi
 [3.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/2.0.0...3.0.0
 [2.0.0]: https://github.com/cybercog/laravel-youtrack-sdk/compare/1.0.0...2.0.0
 
+[#15]: https://github.com/cybercog/laravel-youtrack-sdk/pull/15
 [#13]: https://github.com/cybercog/laravel-youtrack-sdk/pull/13
 [#12]: https://github.com/cybercog/laravel-youtrack-sdk/pull/12
 [#9]: https://github.com/cybercog/laravel-youtrack-sdk/pull/9

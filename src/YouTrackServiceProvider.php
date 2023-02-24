@@ -13,13 +13,13 @@ declare(strict_types=1);
 
 namespace Cog\Laravel\YouTrack;
 
-use Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer as AuthorizerContract;
-use Cog\Contracts\YouTrack\Rest\Client\Client as ClientContract;
+use Cog\Contracts\YouTrack\Rest\Authorizer\Authorizer as AuthorizerInterface;
+use Cog\Contracts\YouTrack\Rest\Client\Client as ClientInterface;
 use Cog\YouTrack\Rest\Authenticator\CookieAuthenticator;
 use Cog\YouTrack\Rest\Client\YouTrackClient;
 use Cog\YouTrack\Rest\HttpClient\GuzzleHttpClient;
 use GuzzleHttp\Client as HttpClient;
-use Illuminate\Contracts\Config\Repository as ConfigContract;
+use Illuminate\Contracts\Config\Repository as AppConfigRepositoryInterface;
 use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
@@ -38,8 +38,8 @@ final class YouTrackServiceProvider extends ServiceProvider
 
     private function registerBindings(): void
     {
-        $this->app->bind(ClientContract::class, function () {
-            $config = $this->app->make(ConfigContract::class);
+        $this->app->bind(ClientInterface::class, function () {
+            $config = $this->app->make(AppConfigRepositoryInterface::class);
 
             $httpClient = new GuzzleHttpClient(new HttpClient([
                 'base_uri' => $config->get('youtrack.base_uri'),
@@ -62,7 +62,7 @@ final class YouTrackServiceProvider extends ServiceProvider
         $this->mergeConfigFrom($source, 'youtrack');
     }
 
-    private function resolveAuthorizerDriver(ConfigContract $config): AuthorizerContract
+    private function resolveAuthorizerDriver(AppConfigRepositoryInterface $config): AuthorizerInterface
     {
         $authorizer = $config->get('youtrack.authorizer');
 
