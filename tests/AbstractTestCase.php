@@ -14,15 +14,15 @@ declare(strict_types=1);
 namespace Cog\Tests\Laravel\YouTrack;
 
 use Cog\Laravel\YouTrack\YouTrackServiceProvider;
-use Orchestra\Testbench\TestCase as Orchestra;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
-abstract class TestCase extends Orchestra
+abstract class AbstractTestCase extends OrchestraTestCase
 {
     /**
      * Load package service provider.
      *
-     * @param \Illuminate\Foundation\Application $app
-     * @return array
+     * @param \Illuminate\Foundation\Application  $app
+     * @return array<int, class-string>
      */
     protected function getPackageProviders($app): array
     {
