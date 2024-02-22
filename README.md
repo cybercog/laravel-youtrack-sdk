@@ -49,8 +49,8 @@ Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-
 ## Requirements
 
 - YouTrack >= 3.0 with REST-API enabled (always enabled, by default)
-- PHP >= 7.1
-- Guzzle HTTP Client >= 6.2
+- PHP >= 8.1
+- Guzzle HTTP Client >= 7.0
 - Laravel >= 5.1.20
 
 ## Installation
@@ -61,7 +61,7 @@ composer installed.
 
 Once composer is installed, execute the following command in your project root to install this library:
 
-```shell script
+```shell
 composer require cybercog/laravel-youtrack-sdk
 ```
 
@@ -69,7 +69,7 @@ composer require cybercog/laravel-youtrack-sdk
 
 Laravel YouTrack SDK designed to work with default config, but it always could be modified. First of all publish it:
 
-```shell script
+```shell
 php artisan vendor:publish --tag="youtrack-config"
 ```
 
@@ -229,7 +229,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 Run the tests with:
 
-```shell script
+```shell
 vendor/bin/phpunit
 ```
 

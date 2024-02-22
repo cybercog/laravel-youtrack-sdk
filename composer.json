@@ -37,8 +37,8 @@
         "docs": "https://github.com/cybercog/youtrack-php-sdk/wiki"
     },
     "require": {
-        "php": "^7.1",
-        "cybercog/youtrack-php-sdk": "^4.0",
+        "php": "^8.1",
+        "cybercog/youtrack-php-sdk": "^5.0",
         "illuminate/support": "^5.8|^6.0|^7.0|^8.0"
     },
     "require-dev": {
