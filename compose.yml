@@ -1,0 +1,11 @@
+services:
+  php81:
+    container_name: laravel-youtrack-sdk-81
+    image: laravel-youtrack-sdk
+    build:
+      context: ./
+      dockerfile: ./.docker/php81.Dockerfile
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app

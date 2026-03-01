@@ -12,7 +12,7 @@
 
 ## Introduction
 
-Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-php-sdk#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
+Laravel wrapper for the [PHP YouTrack REST](https://github.com/cybercog/youtrack-rest-php#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
 
 ## Contents
 
@@ -51,7 +51,7 @@ Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-
 - YouTrack >= 3.0 with REST-API enabled (always enabled, by default)
 - PHP >= 8.1
 - Guzzle HTTP Client >= 7.0
-- Laravel >= 5.1.20
+- Laravel >= 9.0
 
 ## Installation
 
