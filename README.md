@@ -3,7 +3,7 @@
 ![cog-laravel-youtrack-sdk](https://cloud.githubusercontent.com/assets/1849174/26226734/98de7ac6-3c36-11e7-9017-4c0f2151ec81.png)
 
 <p align="center">
-<a href="https://travis-ci.org/cybercog/laravel-youtrack-sdk"><img src="https://img.shields.io/travis/cybercog/laravel-youtrack-sdk/master.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://github.com/cybercog/laravel-youtrack-sdk/actions/workflows/tests.yml"><img src="https://img.shields.io/github/actions/workflow/status/cybercog/laravel-youtrack-sdk/tests.yml?style=flat-square" alt="Build"></a>
 <a href="https://styleci.io/repos/91741303"><img src="https://styleci.io/repos/91741303/shield" alt="StyleCI"></a>
 <a href="https://codeclimate.com/github/cybercog/laravel-youtrack-sdk"><img src="https://img.shields.io/codeclimate/github/cybercog/laravel-youtrack-sdk.svg?style=flat-square" alt="Code Climate"></a>
 <a href="https://github.com/cybercog/laravel-youtrack-sdk/releases"><img src="https://img.shields.io/github/release/cybercog/laravel-youtrack-sdk.svg?style=flat-square" alt="Releases"></a>
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-php-sdk#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
+Laravel wrapper for the [PHP YouTrack REST](https://github.com/cybercog/youtrack-rest-php#readme) library provides set of tools to interact with [JetBrains YouTrack Issue Tracking and Project Management software](https://www.jetbrains.com/youtrack/). 
 
 ## Contents
 
@@ -51,7 +51,7 @@ Laravel wrapper for the [PHP YouTrack SDK](https://github.com/cybercog/youtrack-
 - YouTrack >= 3.0 with REST-API enabled (always enabled, by default)
 - PHP >= 8.1
 - Guzzle HTTP Client >= 7.0
-- Laravel >= 5.1.20
+- Laravel >= 9.0
 
 ## Installation
 
