@@ -1,10 +1,59 @@
 services:
   php81:
     container_name: laravel-youtrack-sdk-81
-    image: laravel-youtrack-sdk
     build:
       context: ./
-      dockerfile: ./.docker/php81.Dockerfile
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.1"
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  php82:
+    container_name: laravel-youtrack-sdk-82
+    build:
+      context: ./
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.2"
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  php83:
+    container_name: laravel-youtrack-sdk-83
+    build:
+      context: ./
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.3"
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  php84:
+    container_name: laravel-youtrack-sdk-84
+    build:
+      context: ./
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.4"
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+
+  php85:
+    container_name: laravel-youtrack-sdk-85
+    build:
+      context: ./
+      dockerfile: ./.docker/php.Dockerfile
+      args:
+        PHP_VERSION: "8.5"
     tty: true
     working_dir: /app
     volumes:
